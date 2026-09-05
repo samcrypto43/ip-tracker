@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📍 IP Address Tracker</h1>
+            <p>Track IP addresses and discover their location</p>
+        </div>
+
+        <div class="search-section">
+            <input 
+                type="text" 
+                id="ipInput" 
+                placeholder="Enter IP address or domain name (e.g., 8.8.8.8 or google.com)"
+                class="ip-input"
+            >
+            <button id="searchBtn" class="search-btn">Search</button>
+        </div>
+
+        <div class="results-container">
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>IP Address</h3>
+                    <p id="ipResult">-</p>
+                </div>
+                <div class="result-card">
+                    <h3>Location</h3>
+                    <p id="locationResult">-</p>
+                </div>
+                <div class="result-card">
+                    <h3>ISP</h3>
+                    <p id="ispResult">-</p>
+                </div>
+                <div class="result-card">
+                    <h3>Timezone</h3>
+                    <p id="timezoneResult">-</p>
+                </div>
+            </div>
+
+            <div class="details-section">
+                <div class="detail-item">
+                    <span class="label">Country:</span>
+                    <span id="countryResult">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Region:</span>
+                    <span id="regionResult">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Latitude:</span>
+                    <span id="latResult">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Longitude:</span>
+                    <span id="lonResult">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="map" class="map"></div>
+
+        <div class="info-section">
+            <h2>How It Works</h2>
+            <p>This IP tracker uses geolocation APIs to retrieve information about IP addresses. Enter any IP address or domain name to see:</p>
+            <ul>
+                <li>✓ Geographic location</li>
+                <li>✓ Internet Service Provider (ISP)</li>
+                <li>✓ Timezone information</li>
+                <li>✓ Exact coordinates on a map</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
